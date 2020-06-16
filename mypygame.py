@@ -65,7 +65,8 @@ def player(x, y):
 
 def enemy(x, y, i):
     screen.blit(enemyImg[i], (x,y))
-
+    
+#press space bar to shoot 
 def fire_bullet(x, y):
     global bullet_state
     bullet_state = "fire"
@@ -91,6 +92,8 @@ while running:
             running = False
     
     #if keystroke is pressed, check direction 
+    #press arrow keys for movement
+    
     if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_LEFT:
                 playerX_change = -0.3
